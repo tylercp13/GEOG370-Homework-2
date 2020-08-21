@@ -3,26 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projections</title>
+    <title>Different Map Projections</title>
 </head>
 <body>
     <h1>In this project I learned how to display images in different projections</h1>
     
-    <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2>
-    <p>You can write a paragraph here</p>
+    <p>Using the QGIS software, I was able to transform a basic map of the world by applying various types of projections.  I chose the projections that I found to be the most interesting,  and then recorded the name and EPSG values associated with them.  I used the Indicatrix Mapper plugin to add a latitude/longitude grid and circle shapes, which allowed me to study the varying levels of distortion in both shape and size that accompany each projection type. </p>
     
     <h2>WGS84 Projection</h2>
-    <h3>Some observations</h3>
+    <h3>This is one of the most common projection types, as it maintains land shape very well, but distorts the size of countries near the poles.  It is used in many GPS and map softwares, as it provides fairly accurate angles for navigation.</h3>
     <a href=".//maps/4326.png">
     <img src=".//maps/4326.png" alt="WGS84" width='500px'>
     </a>
     <h2>Aitoff Projection</h2>
-    <h3>Some observations</h3>
+    <h3>This projection appears to distort each country horizontally as it creates a more oblong, ellipse-like shape for the total map.  While the general shape of countries seems accurate,  the distance between them looks distorted and there is still a fair amount of distortion in size.  </h3>
     <a href=".//maps/54043.png">
     <img src=".//maps/54043.png" alt="Aitoff" width='500px'>
     </a>
-    <h2 style="color:red">Now, you should <u>add the following projections on your own:</u></h2>
-    <h3>EPSG: 3857, 53018, 54034, 54027, 102016, and two additional projections that you choose.</h3>
+    <h2>Sphere Bonne Projection</h2>
+    <h3>This heart-shaped projection provides accurate scales and shapes for the countries nearest the North Pole,  while the land masses in the South appear extremely distorted and elongated.  </h3>
+    <a href="./maps/Sphere Bonne Projection.png">
+    <img src="./maps/Sphere Bonne Projection.png" alt="Sphere Bonne" width='500px'>
+    </a>  
+     <h2>North Pole Azimuthal Projection</h2>
+    <h3>This projection provides a perspective from the North Pole, meaning that each of the Northernmost countries and land masses are fairly accurate in both size and shape,  while the land in the Southern Hemisphere is stretched out and is very difficult to study at all.  This kind of projection would be very helpful for studying only the Northern Hemisphere of Earth.</h3>
+    <a href="./maps/North Pole Azimuthal.png">
+    <img src="./maps/North Pole Azimuthal.png" alt="North Pole Azi" width='500px'>
+    </a>
+    <h2>Sphere Winkel Projection</h2>
+    <h3>This projection appears to be one of the most accurate in both shape and size of land masses.  The countries near the equator do appear to be a little bit scaled down compared to those in the Poles,  but otherwise the shape and size of continents appear to be accurate, especially considering that a more rounded shape was acheived.  </h3>
+    <a href="./maps/Sphere Winkel Projection.png">
+    <img src="./maps/Sphere Winkel Projection.png" alt="Sphere Winkel" width='500px'>
+    </a>
+    <h2>Pseudo Mercator Projection</h2>
+    <h3>This projection almost perfectly represents the shape of each continent, but vastly distorts the size of each country.  Greenland appears to be around the same size as the entirety of Africa,  when it is actually only a fourteenth of the size.  This projection is used by mapping websites because it accurately measures angles of navigation.</h3>
+    <a href="./maps/Pseudo Mercator Projection.png">
+    <img src="./maps/Pseudo Mercator Projection.png" alt="Pseudo Mercator" width='500px'>
+    </a>
+    <h2>World Cylindrical Equal Area Projection</h2>
+    <h3>This projection appears as if a flat map was rolled around a cylindrical object, such as a hollow tube.  The equatorial land masses appear to be in accurate scales and sizes,  but the Poles are difficult to see and measure.  The whole map seems to be stretched horizontally.</h3>
+    <a href="./maps/World Cylindrical Equal Area .png">
+    <img src="./maps/World Cylindrical Equal Area .png" alt="World Cylindrical " width='500px'>
+    </a>
+    <h2>World Equidistant Conic Projection</h2>
+    <h3>This projection makes a clear round image of the world,  meaning that any land in the central region are not distorted as badly as those on the outer ring,  such as Antarctica.  Besides this elongation,  all of the countries are fairly accurately represented in both their size and shape.  </h3>
+    <a href="./maps/World Equidistant Conic Projection.png">
+    <img src="./maps/World Equidistant Conic Projection.png" alt="World Equidistant Conic" width='500px'>
+    </a>
+    <h2>World Polyconic Projection</h2>
+    <h3>This projection is composed of multiple cone shapes,  which means that most of the larger continents are in the center of the map,  where their sizes and shapes can be preserved.  Any land on the periphery of this projection is distorted horizontally,  and this map does not accurately portray the distances between each land mass. </h3>
+    <a href="./maps/World Polyconic Projection.png">
+    <img src="./maps/World Polyconic Projection.png" alt="World Polyconic" width='500px'>
+    </a>
     <p></p>
     <h2>Data used for this project</h2>
     <a href="https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip"> Download Natrual Earth 1:10m Cultural Vector </a>
