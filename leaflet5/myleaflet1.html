@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+
+
+ 
+</head>
+<body>
+    <div id="mapid"></div>
+    <style>
+        #mapid{ width: 900 px; height: 500px}
+    </style>
+
+    <script>
+        var map = L.map('mapid').setView([35.91,-79.05], 17);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {}).addTo(map)
+        // L.marker([35.91260924367086, -79.04647093266249]).addTo(map)
+        //     .bindPopup("My Room in Everett Residence Hall")
+        //     .openPopup();
+        // L.marker([35.90762516165882, -79.0509083122015]).addTo(map)
+        //     .bindPopup("The Greenhouse in the Genome Sciences Building")
+        //     .openPopup();
+        // L.marker([35.91068369924137, -79.04476940631865]).addTo(map)
+        //     .bindPopup("The Old Chapel Hill Cemetery")
+        //     .openPopup();
+
+        var everettIcon = L.icon({
+            iconUrl: "https://img.icons8.com/bubbles/2x/bed.png",
+            iconSize: [50,50],
+            popupAnchor: [0,0]
+            });
+
+        var greenhouseIcon = L.icon({
+            iconUrl: "https://www.pngkey.com/png/detail/442-4420682_landscape-clipart-landscaping-maintenance-plant-icon.png",
+            iconSize: [50,50],
+            popupAnchor: [0,0]
+            });
+
+        var cemeteryIcon = L.icon({
+            iconUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTmeYDx9_Qb6qnW-9JJOmREJ6D4ELYnThI33A&usqp=CAU",
+            iconSize: [50,50],
+            popupAnchor: [0,0]
+            });
+
+        var everettImage = "Everett Residence Hall<br/><img src= 'https://media.thetab.com/blogs.dir/104/files/2016/11/13729089-10153677292637409-6759820367943888236-n.jpg'width='100px'/>";
+
+        var greenhouseImage = "The GSB Greenhouse<br/><img src= 'https://www.directorstalkinterviews.com/wp-content/uploads/2020/07/CBD-hemp-1024x767.png'width='100px'/>";
+
+        var cemeteryImage = "The Old Chapel Hill Cemetery<br/><img src=  'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/2008-07-21_Old_Chapel_Hill_Cemetery_2.jpg/1200px-2008-07-21_Old_Chapel_Hill_Cemetery_2.jpg'width='100px'/>";
+
+        L.marker([35.91260924367086, -79.04647093266249], { 
+            icon: everettIcon,
+        pointToLayer: function (feature, latlng) {
+        return L.marker(latlng);}})
+        .bindPopup(everettImage)
+        .openPopup()
+        .addTo(map)
+
+        L.marker([35.90762516165882, -79.0509083122015], {
+            icon: greenhouseIcon,
+        pointToLayer: function (feature, latlng) {
+        return L.marker(latlng);}})
+        .bindPopup(greenhouseImage)
+        .openPopup()
+        .addTo(map)
+
+        L.marker([35.91068369924137, -79.04476940631865], {
+            icon: cemeteryIcon,
+        pointToLayer: function (feature, latlng) {
+        return L.marker(latlng);}})
+        .bindPopup(cemeteryImage)
+        .openPopup()
+        .addTo(map)
+        
+        
+    </script>
+
+</body>`
+</html>
