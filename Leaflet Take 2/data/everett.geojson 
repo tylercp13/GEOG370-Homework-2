@@ -1,0 +1,6 @@
+var everett = {
+"type":"FeatureCollection",
+"features":[
+{ "type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-79.04647093266249,35.91260924367086]}}
+]
+}
